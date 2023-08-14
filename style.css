@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Desktop fonts";
+  src: url(Stratos/statosskyeng-v1.001/Desktop-fonts/stratosskyeng-black.otf);
+}
+
+.h1 {
+  font-family: "Desktop fonts";
+}
