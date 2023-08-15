@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Desktop fonts";
   src: url(Stratos/statosskyeng-v1.001/Desktop-fonts/stratosskyeng-regular.otf);
-  font-weight: 500;
 }
 
 * {
@@ -10,21 +9,14 @@
 }
 
 .heading,
-.difficulty-levels-item,
-.button
+.button,
+.radio-toolbar label
  {
   font-family: "Desktop fonts";
 }
 
-.heading {
-  text-align: center;
-  color: #004980;
-  font-size: 48px;
-  font-weight: 100;
-}
-
 .difficulty-selection-page {
-  height: 774px;
+  height: 100vh;
   background-color: #004980;
   display: flex;
   justify-content: space-around;
@@ -42,20 +34,40 @@
   border-radius: 12px;
 }
 
-.difficulty-levels {
+.heading {
+  text-align: center;
+  color: #004980;
+  font-size: 48px;
+}
+
+.radio-toolbar {
   display: flex;
   gap: 32px;
 }
 
-.difficulty-levels-item {
+.radio-toolbar input[type="radio"] {
+  display: none;
+}
+
+.radio-toolbar label {
   width: 98px;
   height: 98px;
-  border: none;
   border-radius: 12px;
   background-color: #FFFFFF;
   font-size: 64px;
   color: #0080C1;
   cursor: pointer;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+  background-color: #d0ffb7;
+  border: 1px solid #1CA92E;
+}
+
+label {
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .button {
@@ -68,7 +80,3 @@
     border: none;
     cursor: pointer;
 }
-
-
-
-
