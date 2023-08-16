@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Desktop fonts";
-  src: url(Stratos/statosskyeng-v1.001/Desktop-fonts/stratosskyeng-regular.otf);
+  src: url(fonts/stratosskyengweb-regular.woff),
+  url(fonts/stratosskyengweb-regular.woff2)
 }
 
 * {
