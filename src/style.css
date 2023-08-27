@@ -1,0 +1,165 @@
+@font-face {
+    font-family: Stratos;
+    src: url('fonts/stratosskyengweb-regular.woff'),
+        url('fonts/stratosskyengweb-regular.woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heading,
+.button,
+.radio-toolbar label {
+    font-family: Stratos;
+}
+
+.difficulty-selection-page {
+    height: 100vh;
+    background-color: #004980;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add-games {
+    height: 100vh;
+    background-color: #004980;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+    padding-bottom: 46px;
+    align-items: center;
+}
+
+.timer-box {
+    display: flex;
+    padding-left: 22px;
+}
+
+.digital-minutes,
+.digital-seconds {
+    font-family: Stratos;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+}
+
+.timer-min,
+.timer-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.minutes,
+.seconds {
+    font-family: Stratos;
+    color: #fff;
+    font-style: normal;
+    line-height: 32px;
+}
+
+.main-item {
+    width: 480px;
+    height: 459px;
+    background-color: #c2f5ff;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.heading {
+    text-align: center;
+    color: #004980;
+    font-size: 48px;
+}
+
+.radio-toolbar {
+    display: flex;
+    gap: 32px;
+}
+
+.radio-toolbar input[type='radio'] {
+    display: none;
+}
+
+.radio-toolbar label {
+    width: 98px;
+    height: 98px;
+    border-radius: 12px;
+    background-color: #fff;
+    font-size: 64px;
+    color: #0080c1;
+    cursor: pointer;
+}
+
+.radio-toolbar input[type='radio']:checked + label {
+    background-color: #d0ffb7;
+    border: 1px solid #1ca92e;
+}
+
+.button,
+.button-start-the-game-again {
+    width: 246px;
+    height: 50px;
+    border-radius: 12px;
+    background: #7ac100;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-start-the-game-again {
+    margin-right: 22px;
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+}
+
+.level-card {
+    width: 95px;
+    height: 133px;
+    cursor: pointer;
+}
+
+.level-card-shirt {
+    background-image: url('/image/cardShirt.png');
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 133px;
+}
+
+.level-value {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.level-easy {
+    grid-template-columns: repeat(3, 12fr);
+}
+
+.level-medium {
+    grid-template-columns: repeat(6, 12fr);
+}
+
+.level-hard {
+    grid-template-columns: repeat(9, 12fr);
+}
