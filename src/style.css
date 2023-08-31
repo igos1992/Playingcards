@@ -1,165 +1,169 @@
 @font-face {
-    font-family: Stratos;
-    src: url('fonts/stratosskyengweb-regular.woff'),
-        url('fonts/stratosskyengweb-regular.woff2');
+    font-family: StratosSkyeng;
+    src: url('/fonts/stratosskyengweb-regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-label {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+body {
+    background: #004980;
+    font-family: StratosSkyeng, sans-serif;
 }
 
-.heading,
-.button,
-.radio-toolbar label {
-    font-family: Stratos;
+.center {
+    padding-left: calc(50% - 250px);
+    padding-right: calc(50% - 250px);
 }
 
-.difficulty-selection-page {
-    height: 100vh;
-    background-color: #004980;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.top {
+    padding-top: 158px;
 }
 
-.add-games {
-    height: 100vh;
-    background-color: #004980;
-}
-
-.header-box {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 22px;
-    padding-bottom: 46px;
-    align-items: center;
-}
-
-.timer-box {
-    display: flex;
-    padding-left: 22px;
-}
-
-.digital-minutes,
-.digital-seconds {
-    font-family: Stratos;
-    color: #fff;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 72px;
-}
-
-.timer-min,
-.timer-sec {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.minutes,
-.seconds {
-    font-family: Stratos;
-    color: #fff;
-    font-style: normal;
-    line-height: 32px;
-}
-
-.main-item {
+.box-game {
     width: 480px;
     height: 459px;
-    background-color: #c2f5ff;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
     border-radius: 12px;
-}
-
-.heading {
-    text-align: center;
-    color: #004980;
-    font-size: 48px;
-}
-
-.radio-toolbar {
+    background: #c2f5ff;
+    padding: 50px;
     display: flex;
-    gap: 32px;
+    flex-flow: column wrap;
+    align-content: center;
+    gap: 48px;
 }
 
-.radio-toolbar input[type='radio'] {
-    display: none;
+.box-game__title {
+    color: #004980;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
 }
 
-.radio-toolbar label {
+.box-game__button {
+    background-color: #7ac100;
+    width: 246px;
+    height: 50px;
+    color: #fff;
+    align-self: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: StratosSkyeng, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.2s;
+}
+
+.box-game__button:hover {
+    transform: scale(1.1);
+    border: 2px solid #fff;
+}
+
+.box-difficulty-level {
+    display: flex;
+    gap: 26px;
+}
+
+.box-difficulty-level__button {
     width: 98px;
     height: 98px;
     border-radius: 12px;
-    background-color: #fff;
-    font-size: 64px;
-    color: #0080c1;
-    cursor: pointer;
-}
-
-.radio-toolbar input[type='radio']:checked + label {
-    background-color: #d0ffb7;
-    border: 1px solid #1ca92e;
-}
-
-.button,
-.button-start-the-game-again {
-    width: 246px;
-    height: 50px;
-    border-radius: 12px;
-    background: #7ac100;
-    color: #fff;
-    font-size: 24px;
     border: none;
-    cursor: pointer;
+    color: #0080c1;
+    text-align: center;
+    font-family: StratosSkyeng, sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px;
+    background-color: #fff;
 }
 
-.button-start-the-game-again {
-    margin-right: 22px;
+.box-difficulty-level__radio {
+    display: none;
 }
 
-.level {
+.box-difficulty-level__radio:checked + label {
+    background-color: #004980;
+    border: 3px solid #004980;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.box-difficulty-level__label {
+    width: 98px;
+    height: 98px;
+    border-radius: 12px;
+    border: none;
+    color: #0080c1;
+    font-family: StratosSkyeng, sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px;
+    background-color: #fff;
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
 }
 
-.level-card {
-    width: 95px;
-    height: 133px;
-    cursor: pointer;
+.box-difficulty-level__label:hover {
+    background-color: #c4e8f0;
+    border: 1px solid #004980;
+    transform: scale(1.1);
 }
 
-.level-card-shirt {
-    background-image: url('/image/cardShirt.png');
-    background-repeat: no-repeat;
-    width: 95px;
-    height: 133px;
+.game-cards {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
 }
 
-.level-value {
+.game-cards-timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-cards-timer__init {
+    display: flex;
+    justify-content: flex-end;
+    gap: 57px;
+}
+
+.game-cards-timer__item {
+    color: #fff;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: StratosSkyeng, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.game-cards-timer__time {
+    color: #fff;
+    font-family: StratosSkyeng, sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px;
+}
+
+.game-cards__suits {
+    padding: 48px;
     display: grid;
-    grid-gap: 20px;
-}
-
-.level-easy {
-    grid-template-columns: repeat(3, 12fr);
-}
-
-.level-medium {
-    grid-template-columns: repeat(6, 12fr);
-}
-
-.level-hard {
-    grid-template-columns: repeat(9, 12fr);
+    grid-template-columns: repeat(6, auto);
+    justify-content: center;
+    gap: 15px;
 }
