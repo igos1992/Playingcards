@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es6", // поменял на es6 c es5
+        "allowJs": true,
+        "sourceMap": true,
+        "moduleResolution": "Node"
+    }
+}
