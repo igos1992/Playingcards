@@ -1,6 +1,8 @@
 import '../src/style.css';
-export function renderDifficultyLevels(renderLevelGame) {
-    const appElement = document.querySelector('.app');
+import { renderLevelGame } from './renderLevelGame';
+
+export function renderDifficultyLevels(): void {
+    const appElement = document.querySelector('.app') as HTMLDivElement;
 
     const difficultyLevels = `
     <div class="top center">
@@ -25,17 +27,21 @@ export function renderDifficultyLevels(renderLevelGame) {
 
     appElement.innerHTML = difficultyLevels;
 
-    document.getElementById('form-level').addEventListener('submit', (e) => {
-        e.preventDefault();
+    (document.getElementById('form-level') as HTMLFormElement).addEventListener(
+        'submit',
+        (e) => {
+            e.preventDefault();
 
-        let levels = document.querySelectorAll('.box-difficulty-level__radio');
+            let levels: NodeListOf<HTMLInputElement> =
+                document.querySelectorAll('.box-difficulty-level__radio');
 
-        for (const level of levels) {
-            if (level.checked) {
-                console.log(level.value);
+            for (const level of levels) {
+                if (level.checked) {
+                    console.log(level.value);
 
-                renderLevelGame(level, appElement, renderDifficultyLevels);
+                    renderLevelGame(level, appElement);
+                }
             }
-        }
-    });
+        },
+    );
 }

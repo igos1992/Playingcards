@@ -4,18 +4,19 @@
         "es6": true,
         "node": true
     },
-    "extends": ["eslint:recommended", "prettier"],
+    "extends": ["eslint:recommended", "plugin:prettier/recommended"],
     "plugins": ["prettier"],
     "parserOptions": {
-        "ecmaVersion": 2020,
+        "ecmaVersion": 2023,
         "sourceType": "module"
     },
     "rules": {
-        // "prettier/prettier": "error",
         "prettier/prettier": [
             "error",
-            { "endOfLine": "auto" }
-          ],
+            {
+                "endOfLine": "auto"
+            }
+        ],
         "camelcase": ["error"],
         "eqeqeq": ["error", "always"]
     }
