@@ -5,13 +5,34 @@ import { renderGameDifficulty } from '../index';
 import { Timer } from 'easytimer.js';
 import { renderModalPageWin, renderModalPageLost } from './modalPage';
 
+let cardsFlipSide: string[] = [];
+// function pushCardsFlipSideArr(levelGame: number) {
+//     cardsFlipSide = [];
+//     for (let i = 0; i < levelGame; i++) {
+//         cardsFlipSide.push(
+//             `<img id="cards-click" data-index="${i}" class="game-cards__flip-side" src="../static/cardShirt.png">`,
+//         );
+//     }
+//     // return cardsFlipSide;
+// }
+
+export function getCards(levelGame: number) {
+    const result: string[] = [];
+    for (let i = 0; i < levelGame; i++) {
+        result.push(
+            `<img id="cards-click" data-index="${i}" class="game-cards__flip-side" src="../static/cardShirt.png">`,
+        );
+    }
+    return result;
+}
+
 export function renderLevelGame(
     level: HTMLInputElement,
     appEl: HTMLDivElement,
 ): void {
     let levelGame: number = Number(level.value);
     let count = 0;
-    const cardsFlipSide: string[] = [];
+
     const timer = new Timer();
 
     const cardsSuitsArraySort = shuffle(cardsSuitsArr).slice(0, levelGame / 2);
@@ -20,16 +41,7 @@ export function renderLevelGame(
         cardsSuitsArraySort.concat(cardsSuitsArraySort);
     const duplicateCardsArrSort: string[] = shuffle(duplicateCardsArr);
 
-    function getCardsFlipSideArr(levelGame: number) {
-        for (let i = 0; i < levelGame; i++) {
-            cardsFlipSide.push(
-                `<img id="cards-click" data-index="${i}" class="game-cards__flip-side" src="../static/cardShirt.png">`,
-            );
-        }
-        return cardsFlipSide;
-    }
-
-    getCardsFlipSideArr(levelGame);
+    cardsFlipSide = getCards(levelGame);
 
     const appHTML = `
     <div class="game-cards">
@@ -187,3 +199,5 @@ export function renderLevelGame(
         };
     }
 }
+
+// module.exports = { getCards };

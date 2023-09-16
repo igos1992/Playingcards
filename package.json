@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest",
         "start": "webpack-dev-server --open",
         "format": "prettier --write ./src/",
         "lint:js": "eslint ./src/**/*.ts --fix",
@@ -12,8 +12,7 @@
         "lint": "npm run lint:ts && npm run lint:css",
         "prepare": "husky install",
         "build": "webpack",
-        "lint:ts": "tsc --noEmit",
-        "test-jest": "jest"
+        "lint:ts": "tsc --noEmit"
     },
     "repository": {
         "type": "git",
@@ -28,6 +27,7 @@
         "lodash": "^4.17.21"
     },
     "devDependencies": {
+    
         "@types/lodash": "^4.14.197",
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",
@@ -49,5 +49,6 @@
         "webpack": "^5.88.2",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^4.15.1"
+        
     }
 }

@@ -45,4 +45,3 @@ export const cardsSuitsArr = [
     `<img class="game-cards__flip-side" src="./static/aceOfSpades.png">`,
 ];
 
-export default cardsSuitsArr
