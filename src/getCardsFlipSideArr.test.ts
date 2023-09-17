@@ -1,5 +1,5 @@
 import { it, expect } from '@jest/globals';
-import { getCards } from './renderLevelGame';
+import { getCards } from './getCards';
 
 it('should get cards flip side are', () => {
     const lengthArray = getCards(2).length;

@@ -4,6 +4,7 @@ import { cardsSuitsArr } from './arrayCards';
 import { renderGameDifficulty } from '../index';
 import { Timer } from 'easytimer.js';
 import { renderModalPageWin, renderModalPageLost } from './modalPage';
+import { getCards } from './getCards';
 
 let cardsFlipSide: string[] = [];
 // function pushCardsFlipSideArr(levelGame: number) {
@@ -15,16 +16,6 @@ let cardsFlipSide: string[] = [];
 //     }
 //     // return cardsFlipSide;
 // }
-
-export function getCards(levelGame: number) {
-    const result: string[] = [];
-    for (let i = 0; i < levelGame; i++) {
-        result.push(
-            `<img id="cards-click" data-index="${i}" class="game-cards__flip-side" src="../static/cardShirt.png">`,
-        );
-    }
-    return result;
-}
 
 export function renderLevelGame(
     level: HTMLInputElement,
