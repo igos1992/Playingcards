@@ -44,3 +44,4 @@ export const cardsSuitsArr = [
     `<img class="game-cards__flip-side" src="./static/kingSpades.png">`,
     `<img class="game-cards__flip-side" src="./static/aceOfSpades.png">`,
 ];
+
