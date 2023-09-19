@@ -176,7 +176,7 @@ body {
 
 .modal {
     display: none;
-    background: #337ab7;
+    background: rgb(12 21 12 / 50%);
     position: fixed;
     inset: 0;
     z-index: 99999;
@@ -227,7 +227,6 @@ body {
     inset: 0;
     justify-content: center;
     align-items: center;
-    opacity: 0.9;
 }
 
 .body_block {
